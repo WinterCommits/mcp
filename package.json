@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "rm -rf dist && tsc && node -e \"require('fs').chmodSync('dist/server.js', '755')\"",
-    "start": "node dist/server.js",
+    "start": "PORT=$PORT node dist/server.js",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
     "format": "prettier --write .",
